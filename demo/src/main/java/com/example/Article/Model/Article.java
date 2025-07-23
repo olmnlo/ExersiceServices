@@ -27,7 +27,7 @@ public class Article {
     private String author;
 
     @NotEmpty(message = "content is required")
-    @Size(min = 10, message = "content is must be at least 200")
+    @Size(min = 200, message = "content is must be at least 200")
     private String content;
 
     @NotEmpty(message = "category is required")
