@@ -20,6 +20,9 @@ public class NewsArticleController {
 
     @GetMapping("/get")
     public ResponseEntity<?> getAllArticles(){
+        if (newsArticleServices.getArticles().isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse("no article found"));
+        }
         return ResponseEntity.status(HttpStatus.OK).body(newsArticleServices.getArticles());
     }
 
@@ -66,12 +69,18 @@ public class NewsArticleController {
 
     @GetMapping("/publish")
     public ResponseEntity<?> getPublishedArticles(){
+        if (newsArticleServices.getPublishedArticles().isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse("no article published"));
+        }
         return ResponseEntity.status(HttpStatus.OK).body(newsArticleServices.getPublishedArticles());
     }
 
 
     @GetMapping("/get/{category}")
     public ResponseEntity<?> getByCategory(@PathVariable String category){
+        if (newsArticleServices.getArticleByCategory(category).isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse("no article with this category"));
+        }
         return ResponseEntity.status(HttpStatus.OK).body(newsArticleServices.getArticleByCategory(category));
     }
 
