@@ -42,7 +42,7 @@ public class NewsArticleServices {
         if (index == -1){
             return false;
         }
-        articles.get(index).setIsPublished("true");
+        articles.get(index).setPublished(true);
         return true;
     }
 
@@ -50,7 +50,7 @@ public class NewsArticleServices {
     public ArrayList<Article> getPublishedArticles(){
         ArrayList<Article> published = new ArrayList<>();
         for(Article a: articles){
-            if (a.getIsPublished().equals("true")){
+            if (a.isPublished()){
                 published.add(a);
             }
         }

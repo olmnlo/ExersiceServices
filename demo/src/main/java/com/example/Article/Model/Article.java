@@ -39,7 +39,7 @@ public class Article {
 
     @NotEmpty(message = "is published is required")
     @AssertFalse( message = "published must be false")
-    private String isPublished;
+    private boolean isPublished;
 
     @NotNull(message = "publish date is required")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
