@@ -1,8 +1,8 @@
-package com.example.demo.Controller;
+package com.example.Article.Controller;
 
-import com.example.demo.Api.ApiResponse;
-import com.example.demo.Model.Article;
-import com.example.demo.Services.NewsArticleServices;
+import com.example.Article.Api.ApiResponse;
+import com.example.Article.Model.Article;
+import com.example.Article.Services.NewsArticleServices;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.example.demo.Model;
+package com.example.Article.Model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.*;
@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
