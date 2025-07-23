@@ -38,7 +38,7 @@ public class Article {
     private String imageUrl;
 
     @NotEmpty(message = "is published is required")
-    @Pattern(regexp = "(false)", message = "published must be false")
+    @AssertFalse( message = "published must be false")
     private String isPublished;
 
     @NotNull(message = "publish date is required")
